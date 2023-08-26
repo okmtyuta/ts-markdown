@@ -1,0 +1,61 @@
+{
+  "name": "@okmtyuta/ts-markdown",
+  "private": false,
+  "version": "0.2.18",
+  "type": "module",
+  "main": "./lib/index.umd.cjs",
+  "module": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "author": "okmtyuta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okmtyuta/ts-markdown"
+  },
+  "files": [
+    "lib",
+    "lib/index.css"
+  ],
+  "exports": {
+    ".": {
+      "require": "./lib/index.umd.cjs",
+      "import": "./lib/index.js",
+      "types": "./lib/types/index.d.ts"
+    },
+    "./lib/index.css": {
+      "import": "./lib/index.css",
+      "require": "./lib/index.css"
+    }
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite --outDir lib build && tsc",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "typecheck": "tsc",
+    "fmt": "eslint --cache --fix ./ && prettier --write ./",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.6",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.48.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-storybook": "^0.6.13",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vitest": "^0.34.3"
+  }
+}
