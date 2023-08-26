@@ -6,6 +6,6 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-empty-interface': 'off',
     'no-extra-boolean-cast': 'off',
-    'no-console': 'warn'
+    // 'no-console': 'warn'
   }
 }

@@ -4,6 +4,5 @@ export const ts = 'BEFORE- **italic text** **A-before _A_ A-after** | *B* | C _D
 
 export const parse = (text: string) => {
   const processed = process(text)
-
   return processed
 }
