@@ -1,6 +1,6 @@
-import { HeadingToken, HeadingTokenType } from "../types/typs"
+import { HeadingToken, HeadingTokenType } from '../types/types'
 
-const headingSymbolRegExp = /^#+(.*?)$/
+const headingSymbolRegExp = /^\s*#+(.*?)$/
 
 const headingLevelToHeadingTokenType = (headingLevel: number): HeadingTokenType => {
   switch (headingLevel) {

@@ -21,4 +21,10 @@ export interface DecoratedToken {
   children: Token[]
 }
 
-export type Token = TextToken | DecoratedToken
+export interface ParagraphToken {
+  id: number
+  tokenType: 'paragraph'
+  children: Token[]
+}
+
+export type Token = TextToken | DecoratedToken | HeadingToken | ParagraphToken

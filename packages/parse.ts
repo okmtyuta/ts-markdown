@@ -1,8 +1,17 @@
 import { process } from './process/process'
+import { HeadingToken, Token } from './types/types'
 
-export const ts = 'BEFORE- **italic text** **A-before _A_ A-after** | *B* | C _D_ E __F__ G**H**I J_K_'
-
-export const parse = (text: string) => {
+const lineParse = (text: string) => {
   const processed = process(text)
   return processed
+}
+
+export const parse = (text: string) => {
+  const lines = text.split('\n')
+  const lineTokens: (Token[] | HeadingToken[])[] = []
+  for (const line of lines) {
+    const processed = lineParse(line)
+    lineTokens.push(processed)
+  }
+  return lineTokens
 }

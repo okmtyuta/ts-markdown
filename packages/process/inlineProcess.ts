@@ -1,4 +1,4 @@
-import { Token } from "../types/typs"
+import { Token } from '../types/types'
 
 const inlineDecorationSymbolRegExp = /\*+|_+/
 
